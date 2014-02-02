@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>dom - load</title>
+</head>
+<body>
+
+<div id="all"></div>
+<div id="fragment-only"></div>
+
+<script src="../build/build.js"></script>
+<script>
+
+var dom = require('dom');
+dom.use('load', require('dom-load'));
+dom('#all').load('loadable.html');
+dom('#fragment-only').load('loadable.html', '#fragment');
+
+</script>
+
+</body>
+</html>
